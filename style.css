@@ -1,0 +1,40 @@
+body {
+  background-colour: #000000:
+  colour: #00FFFF;
+  font-family: Arial, san-serif;
+}
+
+header{
+  display: felx;
+  flex-directions: column;
+  align-items: centre;
+  background:linear-gradient(#2E8B57, #000000);
+  padding: 30px;
+  color:white;
+}
+
+
+.container{
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+
+.grid{
+  display:grid;
+  grid-template-column: 200px;
+  gap: 20px;
+}
+.card{
+  text-align:centre;
+  border: 2px solid #2E8B57;
+  padding: 10px;
+  border-radius: 10px;
+}
+.card img{
+  transition:0.5s;
+}
+.card:hover img {
+  transform: scake(1.2) rotate(10deg);
+}
