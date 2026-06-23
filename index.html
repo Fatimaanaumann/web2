@@ -1,143 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>F1 Pit Stop</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <header class="animate-fade-in">
-    <h1>F1 Pit Stop</h1>
-    <p>Hover over a card to reveal team info. Click the car to visit their website!</p>
-  </header>
+body {
+  background-color: #0a0a0c;
+  color: #ff6600;
+  font-family: 'Arial Black', Gadget, sans-serif;
+  overflow-x: hidden;
+}
 
-  <div class="container">
-    <div class="grid">
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1c1c22, #000000);
+  padding: 45px 20px;
+  color: #ffffff;
+  border-bottom: 4px solid #e65c00;
+  box-shadow: 0 4px 20px rgba(255, 102, 0, 0.2);
+}
 
-      <div class="card-container">
-        <div class="card-inner">
-          <div class="card-front">
-            <a href="https://www.mercedes-benz.com/en/" target="_blank">
-              <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/fom-website/2024/Mercedes/W15_Front_3_4_R_High_Res_v2" alt="Mercedes F1 Car">
-            </a>
-            <h3>Mercedes-AMG</h3>
-          </div>
-          <div class="card-back">
-            <h3>Mercedes-AMG</h3>
-            <hr>
-            <p class="role">Drivers:</p>
-            <p class="name">George Russell</p>
-            <p class="name">Kimi Antonelli</p>
-            <p class="role">Team Principal:</p>
-            <p class="name">Toto Wolff</p>
-          </div>
-        </div>
-      </div>
+header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px #ff6600;
+  margin-bottom: 12px;
+}
 
-      <div class="card-container">
-        <div class="card-inner">
-          <div class="card-front">
-            <a href="https://www.mclaren.com/" target="_blank">
-              <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/fom-website/2024/McLaren/MCL38_Front34_1" alt="McLaren F1 Car">
-            </a>
-            <h3>McLaren</h3>
-          </div>
-          <div class="card-back">
-            <h3>McLaren</h3>
-            <hr>
-            <p class="role">Drivers:</p>
-            <p class="name">Lando Norris</p>
-            <p class="name">Oscar Piastri</p>
-            <p class="role">Team Principal:</p>
-            <p class="name">Andrea Stella</p>
-          </div>
-        </div>
-      </div>
+header p {
+  color: #b0b3b8;
+  font-family: Arial, sans-serif;
+}
 
-      <div class="card-container">
-        <div class="card-inner">
-          <div class="card-front">
-            <a href="https://www.williamsf1.com/" target="_blank">
-              <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/fom-website/2024/Williams/FW46_Launch_3-4_Front_Left_High_Res" alt="Williams F1 Car">
-            </a>
-            <h3>Williams Racing</h3>
-          </div>
-          <div class="card-back">
-            <h3>Williams Racing</h3>
-            <hr>
-            <p class="role">Drivers:</p>
-            <p class="name">Alex Albon</p>
-            <p class="name">Carlos Sainz</p>
-            <p class="role">Team Principal:</p>
-            <p class="name">James Vowles</p>
-          </div>
-        </div>
-      </div>
+.container {
+  width: 92%;
+  max-width: 1350px;
+  margin: 45px auto;
+}
 
-      <div class="card-container">
-        <div class="card-inner">
-          <div class="card-front">
-            <a href="https://www.ferrari.com/en-EN/formula1" target="_blank">
-              <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/fom-website/2024/Ferrari/SF-24_Studio_3-4_01_High_Res" alt="Ferrari F1 Car">
-            </a>
-            <h3>Ferrari</h3>
-          </div>
-          <div class="card-back">
-            <h3>Ferrari</h3>
-            <hr>
-            <p class="role">Drivers:</p>
-            <p class="name">Charles Leclerc</p>
-            <p class="name">Lewis Hamilton</p>
-            <p class="role">Team Principal:</p>
-            <p class="name">Frédéric Vasseur</p>
-          </div>
-        </div>
-      </div>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 30px;
+}
 
-      <div class="card-container">
-        <div class="card-inner">
-          <div class="card-front">
-            <a href="https://www.redbullracing.com/" target="_blank">
-              <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/fom-website/2024/Red%20Bull/RB20_Front_3_4_High_Res" alt="Red Bull F1 Car">
-            </a>
-            <h3>Red Bull Racing</h3>
-          </div>
-          <div class="card-back">
-            <h3>Red Bull Racing</h3>
-            <hr>
-            <p class="role">Drivers:</p>
-            <p class="name">Max Verstappen</p>
-            <p class="name">Sergio Perez</p>
-            <p class="role">Team Principal:</p>
-            <p class="name">Christian Horner</p>
-          </div>
-        </div>
-      </div>
+.card-container {
+  background-color: transparent;
+  height: 390px;
+  perspective: 1200px;
+}
 
-      <div class="card-container">
-        <div class="card-inner">
-          <div class="card-front">
-            <a href="https://www.astonmartinf1.com/" target="_blank">
-              <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/fom-website/2024/Aston%20Martin/AMR24_Studio_Front_3_4_High_Res" alt="Aston Martin F1 Car">
-            </a>
-            <h3>Aston Martin</h3>
-          </div>
-          <div class="card-back">
-            <h3>Aston Martin</h3>
-            <hr>
-            <p class="role">Drivers:</p>
-            <p class="name">Fernando Alonso</p>
-            <p class="name">Lance Stroll</p>
-            <p class="role">Team Principal:</p>
-            <p class="name">Mike Krack</p>
-          </div>
-        </div>
-      </div>
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.75s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  border-radius: 12px;
+  border: 2px solid #e65c00;
+}
 
-    </div>
-  </div>
+.card-container:hover .card-inner {
+  transform: rotateY(180deg);
+}
 
-</body>
-</html>
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.card-front {
+  background: linear-gradient(145deg, #18181f, #0a0a0c);
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  transition: transform 0.4s ease-in-out;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.6));
+}
+
+.card-container:hover .card-front img {
+  transform: scale(1.08);
+}
+
+.card-front h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-top: 2px solid #e65c00;
+  padding-top: 12px;
+}
+
+.card-back {
+  background: linear-gradient(145deg, #0a0a0c, #18181f);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid #ff6600;
+  box-shadow: inset 0 0 15px rgba(255, 102, 0, 0.15);
+}
+
+.card-back h3 {
+  color: #ff6600;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.card-back hr {
+  border: 0;
+  height: 1px;
+  background: #e65c00;
+  margin: 8px 0 12px 0;
+}
+
+.card-back .role {
+  font-size: 0.8rem;
+  color: #ff6600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+.card-back .name {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.animate-fade-in {
+  animation: dropTop 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes dropTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
